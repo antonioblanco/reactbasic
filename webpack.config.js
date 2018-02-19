@@ -1,6 +1,7 @@
-var path = require('path');
-var entryPath = path.join(_direname,'src');
-var outPath = path.join(_direname,'dist');
+const path = require('path');
+const webpack = require('webpack');
+var entryPath = path.join(__dirname,'src');
+var outPath = path.join(__dirname,'dist');
 
 module.exports =  {
     entry: [
@@ -15,8 +16,11 @@ module.exports =  {
             {
                 test: /\.js$/,
                 include: entryPath,
-                loaders: ['babel']
+                loaders: ['react-hot-loader','babel-loader']
             }
         ]
+    },
+    devServer:{
+        contentBase: outPath
     }
 }
