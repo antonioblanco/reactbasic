@@ -1,9 +1,4 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const HolaMundo = (props) =>(
-    <h1>React FUNCIONA</h1>
-)
-
-
-ReactDOM.render(<HolaMundo />, document.getElementById('app'));
+ReactDOM.render(<h1>React nuevo!</h1>, document.getElementById('app'));
